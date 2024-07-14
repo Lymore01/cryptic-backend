@@ -31,7 +31,7 @@ app.use("/api" ,userRoute)
 app.use("/key" ,keysRoute)
 
 app.get("/", (req,res)=>{
-    res.json(req.user)
+    res.send("hello")
 })
 
 app.listen(PORT, ()=>{
