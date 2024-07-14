@@ -1,13 +1,13 @@
 require("dotenv").config()
-require("../server/database/config/index")
+require("./database/config/index")
 const express = require("express")
 const session = require("express-session");
-const store = require("../server/database/SessionStorage/sessions");
+const store = require("./server/database/SessionStorage/sessions");
 const PORT = process.env.PORT
 const bodyParser = require('body-parser')
 const cors = require("cors")
-const userRoute = require("../server/routes/users/usersRoute")
-const keysRoute = require("../server/routes/keys/createKeys")
+const userRoute = require("./server/routes/users/usersRoute")
+const keysRoute = require("./server/routes/keys/createKeys")
 
 const app = express()
 
