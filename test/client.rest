@@ -1,0 +1,64 @@
+GET http://localhost:3000/api/user/current-user
+###
+POST http://localhost:3000/api/user/register-user
+Content-Type: application/json
+
+{
+    "email":"bev@gmail.com",
+    "password":"bev@123"
+}
+
+###
+POST http://localhost:3000/api/user/login-user
+Content-Type: application/json
+
+{
+    "email":"kelly@gmail.com",
+    "password":"kelly@123"
+}
+
+###
+POST http://localhost:3000/key/api/generate-keys
+Content-Type: application/json
+
+{
+    "phrase":"hello my name is limo kelly from kenya continent india thanks welcome"
+}
+
+###
+GET http://localhost:3000/api/user/66927cede9c94933f17481bc
+
+
+###
+POST http://localhost:3000/api/user/generate-assign-keys
+Content-Type: application/json
+
+{
+    "phrase":"hello my name is limo kelly from kenya continent india thanks welcome"
+}
+
+###
+POST http://localhost:3000/api/user/deposit
+Content-Type: application/json
+
+{
+    "depositAmt":3400
+}
+
+###
+POST http://localhost:3000/api/user/withdraw
+Content-Type: application/json
+
+{
+    "withdrawAmt":30
+}
+
+###
+POST http://localhost:3000/api/user/send
+Content-Type: application/json
+
+{
+    "sendAmt":100,
+    "receiverAddress":"39c8082552b7ba6cfaf00dcd761198d6badff6ee"
+}
+
