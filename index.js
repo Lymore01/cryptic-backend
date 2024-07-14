@@ -11,13 +11,6 @@ const keysRoute = require("./routes/keys/createKeys")
 
 const app = express()
 
-app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', '*'); 
-  res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-  res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-  next();
-});
-
 app.use(
     session({
       secret: process.env.SESSION_SECRET_KEY,
