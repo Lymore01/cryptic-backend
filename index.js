@@ -26,7 +26,12 @@ app.use(
 
 //   middlewares
 app.use(bodyParser.json())
-app.use(cors())
+app.use(cors({
+  origin:"http://localhost:5173"
+}))
+
+
+
 app.use("/api" ,userRoute)
 app.use("/key" ,keysRoute)
 
