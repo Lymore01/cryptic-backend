@@ -29,7 +29,7 @@ app.use(
 //   middlewares
 
 app.use(cors({
-  origin:"https://66965775296a3f7a799453bf--silver-smakager-56a874.netlify.app",
+  origin:"https://crypticos.netlify.app/",
 }));
 
 app.use(bodyParser.json())
