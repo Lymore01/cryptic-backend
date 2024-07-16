@@ -4,34 +4,6 @@ const bcrypt = require("bcryptjs");
 const generateKeys = require("../../utils/createPrivateKeys");
 const getTotalTransactionsByUser = require("../../database/pipelines/pipeline");
 
-// register user
-exports.userRegister = async (req, res) => {
-  const user = new userModel({
-    email: req.body.email,
-    password: await bcrypt.hash(req.body.password, 10),
-  });
-  try {
-    const users = await user.save();
-    res.status(201).json({ users, message: "User registered successfully!" });
-  } catch (error) {
-    res.status(400).json({ message: "Server error" });
-    console.error(error);
-  }
-};
-
-// login user
-exports.userLogin = async (req, res) => {
-  req.session.userId = req.session.passport.user;
-  try {
-    res.status(201).json({
-      message: "User logged in successfully!",
-      user: req.user,
-      session: req.session.id,
-    });
-  } catch (error) {
-    res.json({ message: "You must login!" });
-  }
-};
 
 // get current user
 exports.getCurrentUser = async (req, res) => {
@@ -51,6 +23,39 @@ exports.getCurrentUser = async (req, res) => {
     res.status(200).json(user);
   } catch (error) {
     res.status(500).json({ message: "Error fetching current user!" });
+  }
+};
+
+// register user
+exports.userRegister = async (req, res) => {
+  const user = new userModel({
+    email: req.body.email,
+    password: await bcrypt.hash(req.body.password, 10),
+  });
+  try {
+    const users = await user.save();
+    res.status(201).json({ users, message: "User registered successfully!" });
+  } catch (error) {
+    res.status(400).json({ message: "Server error" });
+    console.error(error);
+  }
+};
+
+
+
+
+
+// login user
+exports.userLogin = async (req, res) => {
+  req.session.userId = req.session.passport.user;
+  try {
+    res.status(201).json({
+      message: "User logged in successfully!",
+      user: req.user,
+      session: req.session.id,
+    });
+  } catch (error) {
+    res.json({ message: "You must login!" });
   }
 };
 
