@@ -12,15 +12,7 @@ const {
   sendMoney
 } = require("../../controllers/users/usersController");
 
-// register user
-usersRoute.post("/user/auth/register-user", userRegister);
 
-// login user
-usersRoute.post(
-  "/user/auth/login-user",
-  passport.authenticate("local"),
-  userLogin
-);
 
 // get current user
 
@@ -40,6 +32,16 @@ usersRoute.post("/user/withdraw", withdrawMoney)
 
 // send
 usersRoute.post("/user/send", sendMoney)
+
+// register user
+usersRoute.post("/user/auth/register-user", userRegister);
+
+// login user
+usersRoute.post(
+  "/user/auth/login-user",
+  passport.authenticate("local"),
+  userLogin
+);
 
 
 

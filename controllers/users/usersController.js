@@ -43,8 +43,6 @@ exports.userRegister = async (req, res) => {
 
 
 
-
-
 // login user
 exports.userLogin = async (req, res) => {
   req.session.userId = req.session.passport.user;
