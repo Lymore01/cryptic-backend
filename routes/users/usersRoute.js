@@ -34,11 +34,11 @@ usersRoute.post("/user/withdraw", withdrawMoney)
 usersRoute.post("/user/send", sendMoney)
 
 // register user
-usersRoute.post("/user/auth/register-user", userRegister);
+usersRoute.post("/auth/register-user", userRegister);
 
 // login user
 usersRoute.post(
-  "/user/auth/login-user",
+  "/auth/login-user",
   passport.authenticate("local"),
   userLogin
 );
