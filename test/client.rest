@@ -12,7 +12,7 @@ Content-Type: application/json
 GET https://cryptic-backend-1x9o-cq49p6b1y-limos-projects.vercel.app/api/user/login-user
 
 ###
-POST https://cryptic-backend-1x9o-cq49p6b1y-limos-projects.vercel.app/api/user/login-user
+POST https://66965504e850a188104bbda6--silver-smakager-56a874.netlify.app/api/user/auth/login-user
 Content-Type: application/json
 
 {

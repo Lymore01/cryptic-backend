@@ -29,8 +29,9 @@ app.use(
 //   middlewares
 
 app.use(cors({
-  origin:"http://localhost:5173",
+  origin:"https://66965775296a3f7a799453bf--silver-smakager-56a874.netlify.app",
 }));
+
 app.use(bodyParser.json())
 
 app.use("/api", userRoute);
