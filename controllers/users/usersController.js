@@ -21,11 +21,11 @@ exports.userRegister = async (req, res) => {
 
 // login user
 exports.userLogin = async (req, res) => {
-  // req.session.userId = req.session.passport.user;
+  req.session.userId = req.session.passport.user;
   try {
     res.status(201).json({
       message: "User logged in successfully!",
-      // user: req.user,
+      user: req.user,
       session: req.session.id,
     });
   } catch (error) {

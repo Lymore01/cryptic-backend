@@ -11,9 +11,8 @@ const keysRoute = require("./routes/keys/createKeys");
 
 const app = express();
 
-app.use(cors(
-  {origin: "http://localhost:5173"}
-));
+app.use(cors());
+app.use(bodyParser.json());
 
 app.use(
   session({
@@ -28,7 +27,6 @@ app.use(
 );
 
 //   middlewares
-app.use(bodyParser.json());
 
 app.use("/api", userRoute);
 app.use("/key", keysRoute);
