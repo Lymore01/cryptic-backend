@@ -9,7 +9,10 @@ Content-Type: application/json
 }
 
 ###
-POST http://localhost:3000/api/user/login-user
+GET https://cryptic-backend-1x9o-cq49p6b1y-limos-projects.vercel.app/api/user/66915cb5e07fa137fcb17085
+
+###
+POST http://localhost:5173/api/user/login-user
 Content-Type: application/json
 
 {
@@ -26,7 +29,7 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:3000/api/user/66927cede9c94933f17481bc
+GET http://localhost:5173/api/user/66927cede9c94933f17481bc
 
 
 ###
