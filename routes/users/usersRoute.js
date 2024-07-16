@@ -13,11 +13,11 @@ const {
 } = require("../../controllers/users/usersController");
 
 // register user
-usersRoute.post("/user/register-user", userRegister);
+usersRoute.post("/user/auth/register-user", userRegister);
 
 // login user
 usersRoute.post(
-  "/user/login-user",
+  "/user/auth/login-user",
   passport.authenticate("local"),
   userLogin
 );
