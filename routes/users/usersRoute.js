@@ -27,7 +27,7 @@ usersRoute.post(
 usersRoute.get("/user/current-user", getCurrentUser)
 
 // get user details
-usersRoute.get("/user/:id", getUserDetailsByID)
+// usersRoute.get("/user/:id", getUserDetailsByID)
 
 // generate private keys and public address
 usersRoute.post("/user/generate-assign-keys", generatePrivateKeysAndAddress)
