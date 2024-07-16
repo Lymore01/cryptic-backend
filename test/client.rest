@@ -65,3 +65,12 @@ Content-Type: application/json
     "receiverAddress":"39c8082552b7ba6cfaf00dcd761198d6badff6ee"
 }
 
+###
+POST https://cryptic-backend.onrender.com/api/user/auth/register-user
+Content-Type: application/json
+
+{
+    "email":"mars@gmail.com",
+    "password":"mars@1234"
+}
+

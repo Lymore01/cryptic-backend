@@ -30,12 +30,10 @@ const UserSchema = new mongoose.Schema(
     },
     privateKey: {
       type: String,
-      unique: false,
       default: "none",
     },
     publicAddress: {
       type: String,
-      unique: false,
       default: "none",
     },
     totalDepositAmount: {
