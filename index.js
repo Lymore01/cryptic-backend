@@ -29,7 +29,7 @@ app.use(
 //   middlewares
 
 app.use(cors({
-  origin:"https://crypticos.netlify.app/",
+  origin:"https://crypticos.netlify.app",
 }));
 
 app.use(bodyParser.json())
